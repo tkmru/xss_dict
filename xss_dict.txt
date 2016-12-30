@@ -2,7 +2,8 @@ x1	<script>alert('XSS')</script>	記号
 x1	<s c r i p t>alert('XSS')</s c r i p t>	記号	
 x1	<img src=x onerror=alert('XSS')>	記号	
 x1	<svg onload=alert('XSS')>	記号	
-x1	<a onmouseover=javascript:alert(1)>zzz</a>	記号	
+x1	<svg onload=alert``>	記号	
+x1	<a onmouseover=alert(1)></a>	記号	
 x1	'><body/onhashchange=alert('XSS')><a href=#>click</a>	記号	
 x1	x" onmouseover="alert('XSS');	記号	
 x1	javascript:alert('XSS');	記号	
