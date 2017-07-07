@@ -11,6 +11,12 @@ Google 日本語入力 辞書ツールを開いて新規辞書にインポート
 
 - ｘ１: 普通のやつ
 
-- ｘ２: 変なやつ、競技用
+- ｘ２: XSS Auditor Bypass
 
-- ｘ３: IE限定(vbs, CSSXSS)
+- ｘ３: XSS Auditor Bypass(Safari only)
+
+- ｘ４: IE/Edge XSS Filter Bypass
+
+- ｘ５: IE限定(vbs, CSSXSS)
+
+ｘ２、ｘ３、ｘ４のBrowser's XSS Filter Bypassは [Browser's XSS Filter Bypass Cheat Sheet](https://github.com/masatokinugawa/filterbypass/wiki/Browser's-XSS-Filter-Bypass-Cheat-Sheet)のものを使っています。

